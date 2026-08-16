@@ -1,0 +1,14 @@
+.glossary-term {
+  border-bottom: 0;
+  text-decoration: none;
+}
+
+.app-shell__frame {
+  border: 0;
+}
+
+@media (min-width: 64.01rem) {
+  .decoration img {
+    transform: scale(1.28);
+  }
+}

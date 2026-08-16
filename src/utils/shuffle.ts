@@ -1,0 +1,1 @@
+export function shuffle<T>(items:readonly T[],random=Math.random):T[]{return items.map((value,index)=>({value,index,order:random()})).sort((a,b)=>a.order-b.order||a.index-b.index).map(item=>item.value)}

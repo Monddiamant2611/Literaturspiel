@@ -1,0 +1,3 @@
+import { categoryLabels,type TextCategory } from "../data/textTypes";
+import { FeedbackBox } from "./FeedbackBox";
+export function ClassificationFeedback({ selected,correct }: { selected:TextCategory;correct:TextCategory }) { const isCorrect=selected===correct;return <FeedbackBox tone={isCorrect?"correct":"incorrect"}>{isCorrect?"Richtig zugeordnet.":`Diese Zuordnung passt noch nicht. Die Textsorte gehört ${correct==="contextual"?"zur Kategorie Kontextabhängig":`zum Bereich ${categoryLabels[correct]}`}.`} <span className="feedback__solution">Korrekte Zuordnung: {categoryLabels[correct]}.</span></FeedbackBox>; }

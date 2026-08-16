@@ -1,0 +1,2 @@
+import { describe,expect,it } from "vitest";import { shuffle } from "../src/utils/shuffle";
+describe("answer order",()=>{it("does not structurally keep the first answer at index zero",()=>{const items=["correct","b","c","d"];const sequences=[[.9,.1,.2,.3],[.2,.9,.1,.3],[.3,.2,.9,.1]];const positions=sequences.map(sequence=>{let index=0;return shuffle(items,()=>sequence[index++]).indexOf("correct")});expect(new Set(positions).size).toBeGreaterThan(1);expect(positions.every(position=>position===0)).toBe(false)})});
